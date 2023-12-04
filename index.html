@@ -9,9 +9,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 </head>
 
 <body>
+
+    <div id="preloader">
+        <div id="loader" class="dots-jump">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
@@ -21,14 +32,16 @@
             <img src="assets/logo1.png" alt="" id="logo" width="100%" height="50px">
         </label>
         <ul>
-            <li><a href="#">Examples</a></li>
-            <li><a href="#">How it Works</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">FAQ</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#howitworks">How it Works</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#faq">FAQ</a></li>
         </ul>
-        <button class="btn">
-            View Pricing
-        </button>
+        <a href="#pricing">
+            <button class="btn" id="pricingbtn">
+                View Pricing
+            </button>
+        </a>
     </nav>
 
     <section id="hero">
@@ -40,20 +53,26 @@
             stood out in a sea of sameness .
         </p>
         <div class="btn-group">
-            <button class="btn" id="btn1">
-                View Pricing
-            </button>
-            <button class="btn" id="btn2">
-                Get Started
-            </button>
+            <a href="#pricing" data-aos="fade-right">
+                <button class="btn" id="btn1">
+                    View Pricing
+                </button>
+            </a>
+            <a href="#joinnow" data-aos="fade-left">
+                <button class="btn" id="btn2">
+                    Get Started
+                </button>
+            </a>
         </div>
-        <video class="videodiv" autoplay playinline loop muted>
-            <source src="assets/video1.mp4" type="">
-        </video>
+        <div class="videodivs" data-aos="zoom-in">
+            <video class="videodiv" playinline loop muted>
+                <source src="assets/video1.mp4" type="" class="source">
+            </video>
+            <button class="playbtn"><img src="assets/play-button.png" alt="" class="playbtnimg"></button>
+            <button class="pausebtn" style="display: none;"><img src="assets/pause.png" alt="" class="pausebtnimg"
+                    style="background-color: white; border-radius: 50%;"></button>
+        </div>
     </section>
-
-
-    <!-- Change Testimonial Colour div differenet  -->
 
     <section class="testimonial-div">
         <h2>
@@ -65,7 +84,45 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #DFE8C0;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div style="background-color: #E8C0E4;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div class="testimonial" style="background-color: #8ACDD7;">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -103,7 +160,45 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #DFE8C0;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div style="background-color: #E8C0E4;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div style="background-color: #8ACDD7;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -141,7 +236,7 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #DFE8C0;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -160,7 +255,7 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #E8C0E4;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -179,83 +274,7 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
+                    <div style="background-color: #8ACDD7;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -295,7 +314,45 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #E8C0E4;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div style="background-color: #DFE8C0;" class="testimonial">
+                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
+                            perfect edit. I don't . have
+                            to do anything. It's awesome. </p>
+                        <div class="testimonial-author">
+                            <img src="assets/p2.png" alt="" class="testimonialimg">
+                            <div class="testimonial-author-div">
+                                <h4>
+                                    Sam Parr
+                                </h4>
+                                <p class="rating">4.5M +</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-divs slide">
+                    <video class="reel" playinline loop muted>
+                        <source src="assets/reel1.mp4" type="">
+                    </video>
+                    <div style="background-color: #8ACDD7;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -390,7 +447,7 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
+                    <div style="background-color: #8ACDD7;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -428,45 +485,7 @@
                     <video class="reel" playinline loop muted>
                         <source src="assets/reel1.mp4" type="">
                     </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
-                        <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
-                            perfect edit. I don't . have
-                            to do anything. It's awesome. </p>
-                        <div class="testimonial-author">
-                            <img src="assets/p2.png" alt="" class="testimonialimg">
-                            <div class="testimonial-author-div">
-                                <h4>
-                                    Sam Parr
-                                </h4>
-                                <p class="rating">4.5M +</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-divs slide">
-                    <video class="reel" playinline loop muted>
-                        <source src="assets/reel1.mp4" type="">
-                    </video>
-                    <div class="testimonial">
+                    <div style="background-color: #E8C0E4;" class="testimonial">
                         <p>1111111111111111111111They take footage straight from our Youtube and turn it into the
                             perfect edit. I don't . have
                             to do anything. It's awesome. </p>
@@ -521,8 +540,7 @@
         </div>
     </section>
 
-
-    <section class="reel-featurediv">
+    <section data-aos="fade-up" id="examples" class="reel-featurediv">
         <div class="slider-container">
             <div class="slides">
                 <div class="slide1">
@@ -640,13 +658,12 @@
         </div>
     </section>
 
-
-    <section class="process">
+    <section id="howitworks" class="process">
         <h2>
             Turn your raw videos into perfectly structured clips that drive growth .
         </h2>
         <div class="process-divs">
-            <div class="process-div">
+            <div data-aos="flip-left" class="process-div">
                 <p class="processnum">1</p>
                 <h4>We take raw video</h4>
                 <img src="assets/process1.png" alt="" class="processimg">
@@ -655,8 +672,8 @@
                     hooks& content from video .
                 </p>
             </div>
-            <div class="process-div">
-                <p class="processnum">1</p>
+            <div data-aos="flip-left" data-aos-delay="200" class="process-div">
+                <p class="processnum">2</p>
                 <h4>Structure it for views .</h4>
                 <img src="assets/process2.png" alt="" class="processimg">
                 <p>
@@ -667,8 +684,8 @@
                     average .
                 </p>
             </div>
-            <div class="process-div">
-                <p class="processnum">1</p>
+            <div data-aos="flip-left" data-aos-delay="300" class="process-div">
+                <p class="processnum">3</p>
                 <h4>Create your unique style.</h4>
                 <img src="assets/process3.png" alt="" class="processimg">
                 <p>
@@ -705,35 +722,35 @@
         </div>
 
         <div class="social-content-divs">
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="100">
                 <h4>Youtube shorts</h4>
                 <p>Reach more viewers with optimized short form videos</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="200">
                 <h4>Instagram Reels</h4>
                 <p>Beat the IG algorithm and break through with engaging reels</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="300">
                 <h4>Podcast to Shorts</h4>
                 <p>Take your podcast video and clip it into short- form videos</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="400">
                 <h4>Product Demos</h4>
                 <p>Show off your product and turn visitors into customers</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="500">
                 <h4>Youtube shorts</h4>
                 <p>Reach more viewers with optimized short form videos</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="600">
                 <h4>Instagram Reels</h4>
                 <p>Beat the IG algorithm and break through with engaging reels</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="700">
                 <h4>Podcast to Shorts</h4>
                 <p>Take your podcast video and clip it into short- form videos</p>
             </div>
-            <div class="social-content">
+            <div class="social-content" data-aos="fade-up" data-aos-delay="800">
                 <h4>Product Demos</h4>
                 <p>Show off your product and turn visitors into customers</p>
             </div>
@@ -741,26 +758,26 @@
     </section>
 
     <section class="use-our-world">
-        <h1 class="lead">
+        <h1 class="lead" data-aos="fade-up">
             Use our world- class video talent to grow faster.
         </h1>
         <p class="hero-desc">
             No job posts. No managing employees. No headaches.
         </p>
         <div class="userlists">
-            <div class="userlist">
+            <div class="userlist" data-aos="fade-left" data-aos-delay="200">
                 <div class="usernum">1</div>
                 <p>
                     Subscribe & Share
                 </p>
             </div>
-            <div class="userlist">
+            <div class="userlist" data-aos="fade-left" data-aos-delay="400">
                 <div class="usernum">2</div>
                 <p>
                     Get edits within 24-72 hours
                 </p>
             </div>
-            <div class="userlist">
+            <div class="userlist" data-aos="fade-left" data-aos-delay="600">
                 <div class="usernum">3</div>
                 <p>
                     Publish & Grow
@@ -770,8 +787,8 @@
 
     </section>
 
-    <section class="pricingdivs">
-        <div class="pricing-div">
+    <section id="pricing" class="pricingdivs">
+        <div class="pricing-div" data-aos="flip-left" data-aos-delay="200">
             <p>Part Timer</p>
             <h3>$ 1,999/ mo</h3>
             <p>Up to 6 videos per month</p>
@@ -799,7 +816,7 @@
                 Part- time
             </button>
         </div>
-        <div class="pricing-div price2">
+        <div class="pricing-div price2" data-aos="flip-left" data-aos-delay="400">
             <p>Part Timer</p>
             <h3>$ 1,999/ mo</h3>
             <p>Up to 6 videos per month</p>
@@ -827,7 +844,7 @@
                 Part- time
             </button>
         </div>
-        <div class="pricing-div price3">
+        <div class="pricing-div price3" data-aos="flip-left" data-aos-delay="600">
             <p>Part Timer</p>
             <h3>$ 1,999/ mo</h3>
             <p>Up to 6 videos per month</p>
@@ -857,27 +874,26 @@
         </div>
     </section>
 
-    <section class="calls-div">
-        <div class="call-div">
+    <section id="joinnow" class="calls-div">
+        <div class="call-div" data-aos="zoom-in-left">
             <div class="call1-div">
                 <h4>Book a free strategy call</h4>
                 <img src="assets/phone.png" alt="" class="callimg">
             </div>
             <p>Earn 5% recurring commissions for each referral .</p>
-            <button class="btn">Book a Call</button>
+            <button class="btn" id="btn1">Book a Call</button>
         </div>
-        <div class="call-div" style="color: white; background-color: #41413e;">
+        <div class="call-div" data-aos="zoom-in-right" data-aos-delay="100" style="color: white; background-color: #41413e;">
             <div class="call1-div">
                 <h4>Refer a friend and get paid</h4>
                 <img src="assets/rupees.png" alt="" class="callimg">
             </div>
             <p>Earn 5% recurring commissions for each referral .</p>
-            <button class="btn" style="background-color: #FFEDE1; color: black;">Join Now</button>
+            <button class="btn" style="background-color: #FFEDE1; color: black;" id="btn2">Join Now</button>
         </div>
     </section>
 
-
-    <section class="faq-div">
+    <section id="faq" class="faq-div">
         <div class="faq-left">
             <h1>Have Questions ?</h1>
             <div class="faq-footer">
@@ -888,7 +904,7 @@
             </div>
         </div>
         <div class="accordion">
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-down" data-aos-delay="20">
                 <button id="accordion-button-1" aria-expanded="false">
                     <span class="accordion-title">Why is the moon sometimes out during the day?</span>
                     <span class="icon" aria-hidden="true"></span>
@@ -901,7 +917,7 @@
                     </p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-down" data-aos-delay="40">
                 <button id="accordion-button-2" aria-expanded="false">
                     <span class="accordion-title">Why is the sky blue?</span>
                     <span class="icon" aria-hidden="true"></span>
@@ -914,7 +930,7 @@
                     </p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-down" data-aos-delay="60">
                 <button id="accordion-button-3" aria-expanded="false">
                     <span class="accordion-title">Will we ever discover aliens?</span>
                     <span class="icon" aria-hidden="true"></span>
@@ -927,7 +943,7 @@
                     </p>
                 </div>
             </div>
-            <div class="accordion-item">
+            <div class="accordion-item" data-aos="fade-down" data-aos-delay="80">
                 <button id="accordion-button-4" aria-expanded="false">
                     <span class="accordion-title">How much does the Earth weigh?</span>
                     <span class="icon" aria-hidden="true"></span>
@@ -956,8 +972,16 @@
         </div>
     </section>
 
-
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 100,
+            duration: 700,
+            once: true,
+        });
+    </script>
+
 </body>
 
 </html>

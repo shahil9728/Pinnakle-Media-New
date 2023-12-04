@@ -1,3 +1,99 @@
+// var ssPreloader = function () {
+
+//     $("html").addClass('ss-preload');
+
+//     $WIN.on('load', function () {
+
+//         //force page scroll position to top at page refresh
+//         $('html, body').animate({ scrollTop: 0 }, 'normal');
+
+//         // will first fade out the loading animation 
+//         $("#loader").fadeOut("slow", function () {
+//             // will fade out the whole DIV that covers the website.
+//             $("#preloader").delay(300).fadeOut("slow");
+//         });
+
+//         // for hero content animations 
+//         $("html").removeClass('ss-preload');
+//         $("html").addClass('ss-loaded');
+
+//     });
+// };
+
+
+const ssPreloader = () => {
+    document.querySelector("html").classList.add('ss-preload');
+
+    window.addEventListener('load', () => {
+        // Force page scroll position to top at page refresh
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Will first fade out the loading animation 
+        const loader = document.getElementById("loader");
+        const preloader = document.getElementById("preloader");
+        
+        fadeOut(loader, "slow", () => {
+            // Will fade out the whole DIV that covers the website.
+            setTimeout(() => {
+                fadeOut(preloader, "slow");
+            }, 300);
+        });
+
+        // For hero content animations 
+        document.querySelector("html").classList.remove('ss-preload');
+        document.querySelector("html").classList.add('ss-loaded');
+    });
+};
+
+// Function to fade out an element
+const fadeOut = (element, duration, callback) => {
+    const fadeEffect = setInterval(() => {
+        if (!element.style.opacity) {
+            element.style.opacity = 1;
+        }
+        if (element.style.opacity > 0) {
+            element.style.opacity -= 0.1;
+        } else {
+            clearInterval(fadeEffect);
+            if (callback && typeof callback === 'function') {
+                callback();
+            }
+        }
+    }, duration / 10);
+};
+
+// Call the preloader function
+ssPreloader();
+
+
+
+const video = document.querySelector('.videodiv');
+const playBtn = document.querySelector('.playbtn');
+const pauseBtn = document.querySelector('.pausebtn');
+
+playBtn.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playBtn.style.display = 'none';
+        pauseBtn.style.display = 'block';
+    } else {
+        video.pause();
+        playBtn.style.display = 'block';
+        pauseBtn.style.display = 'none';
+    }
+});
+
+pauseBtn.addEventListener('click', () => {
+    video.pause();
+    playBtn.style.display = 'block';
+    pauseBtn.style.display = 'none';
+});
+
+
+
+
+
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide1');
 
