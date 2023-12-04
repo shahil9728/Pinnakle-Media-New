@@ -17,6 +17,7 @@ const ssPreloader = () => {
                 }, 300);
             });
 
+            preloader.style.display = 'none';
             // For hero content animations 
             document.querySelector("html").classList.remove('ss-preload');
             document.querySelector("html").classList.add('ss-loaded');
