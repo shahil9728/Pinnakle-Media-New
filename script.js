@@ -57,51 +57,6 @@ const fadeOut = (element, duration, callback) => {
 
 ssPreloader();
 
-
-
-// const ssPreloader = () => {
-//     document.querySelector("html").classList.add('ss-preload');
-
-//     window.addEventListener('load', () => {
-//         window.scrollTo({ top: 0, behavior: 'smooth' });
-//         const loader = document.getElementById("loader");
-//         const preloader = document.getElementById("preloader");
-        
-//         fadeOut(loader, "slow", () => {
-//             // Will fade out the whole DIV that covers the website.
-//             setTimeout(() => {
-//                 fadeOut(preloader, "slow");
-//             }, 300);
-//         });
-
-//         // For hero content animations 
-//         document.querySelector("html").classList.remove('ss-preload');
-//         document.querySelector("html").classList.add('ss-loaded');
-//     });
-// };
-
-// // Function to fade out an element
-// const fadeOut = (element, duration, callback) => {
-//     const fadeEffect = setInterval(() => {
-//         if (!element.style.opacity) {
-//             element.style.opacity = 1;
-//         }
-//         if (element.style.opacity > 0) {
-//             element.style.opacity -= 0.1;
-//         } else {
-//             clearInterval(fadeEffect);
-//             if (callback && typeof callback === 'function') {
-//                 callback();
-//             }
-//         }
-//     }, duration / 10);
-// };
-
-// // Call the preloader function
-// ssPreloader();
-
-
-
 const video = document.querySelector('.videodiv');
 const playBtn = document.querySelector('.playbtn');
 const pauseBtn = document.querySelector('.pausebtn');
