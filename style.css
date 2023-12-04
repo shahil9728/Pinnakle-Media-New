@@ -190,6 +190,7 @@ a:hover {
     height: 90vh;
     position: relative;
     background-color: #DFE8C0;
+    overflow-x: hidden;
 }
 
 #hero::before {
@@ -288,7 +289,7 @@ a:hover {
 .videodiv {
     z-index: 3;
     position: absolute;
-    top: 10%;
+    top: -50px;
     width: 50%;
     border-radius: 10px;
 }
@@ -1113,6 +1114,7 @@ a:hover {
 
     .videodiv {
         width: 90%;
+        top: -70px;
     }
 
     .playbtn,
