@@ -322,6 +322,7 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3em;
 }
 
 .testimonial-div h2 span {
@@ -402,6 +403,11 @@ a:hover {
     }
 }
 
+.stop-animation {
+    animation-play-state: paused !important;
+}
+
+
 
 .slider {
     margin: auto;
@@ -411,7 +417,7 @@ a:hover {
 }
 
 .slide-track {
-    margin-top: 8em;
+    /* margin-top: 8em; */
     animation: scroll var(--animationSpeed) linear infinite;
     display: flex;
     gap: 1em;
@@ -426,13 +432,6 @@ a:hover {
     width: calc(270px * 20);
 }
 
-.slide-track {
-    margin-top: 8em;
-    animation: scroll var(--animationSpeed) linear infinite;
-    display: flex;
-    gap: 1em;
-    width: calc(270px * 20);
-}
 
 
 

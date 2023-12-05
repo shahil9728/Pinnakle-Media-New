@@ -140,3 +140,44 @@ function toggleAccordion() {
 }
 
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
+
+
+const slider = document.querySelector('.slider');
+
+const slideTrack = document.querySelector('.slide-track');
+const slideTrack1 = document.querySelector('.slide-track1');
+
+slideTrack.addEventListener('mouseenter', () => {
+  slideTrack.classList.add('stop-animation');
+});
+
+slideTrack.addEventListener('mouseleave', () => {
+  slideTrack.classList.remove('stop-animation');
+});
+
+slideTrack1.addEventListener('mouseenter', () => {
+  slideTrack1.classList.add('stop-animation');
+});
+
+slideTrack1.addEventListener('mouseleave', () => {
+  slideTrack1.classList.remove('stop-animation');
+});
+
+
+
+
+// const slider = document.querySelector('.slider-track');
+
+// slider.addEventListener('mouseenter', () => {
+//   const slideTracks = document.querySelectorAll('.slide-track');
+//   slideTracks.forEach(track => {
+//     track.classList.add('stop-animation');
+//   });
+// });
+
+// slider.addEventListener('mouseleave', () => {
+//   const slideTracks = document.querySelectorAll('.slide-track');
+//   slideTracks.forEach(track => {
+//     track.classList.remove('stop-animation');
+//   });
+// });
