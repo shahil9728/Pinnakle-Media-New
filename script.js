@@ -164,20 +164,3 @@ slideTrack1.addEventListener('mouseleave', () => {
 });
 
 
-
-
-// const slider = document.querySelector('.slider-track');
-
-// slider.addEventListener('mouseenter', () => {
-//   const slideTracks = document.querySelectorAll('.slide-track');
-//   slideTracks.forEach(track => {
-//     track.classList.add('stop-animation');
-//   });
-// });
-
-// slider.addEventListener('mouseleave', () => {
-//   const slideTracks = document.querySelectorAll('.slide-track');
-//   slideTracks.forEach(track => {
-//     track.classList.remove('stop-animation');
-//   });
-// });
