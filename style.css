@@ -671,7 +671,7 @@ a:hover {
     top: -10px;
     left: 10px;
     background-color: #FFEDE1;
-    padding: 1em;
+    padding: 0.5em 1em;
 }
 
 .processimg {
@@ -1127,6 +1127,11 @@ a:hover {
 
     .testimonial-div h2 span img {
         width: 50%;
+    }
+
+    .testimonial-div h2
+    {
+        font-size: 1em;
     }
 
     .reel {
