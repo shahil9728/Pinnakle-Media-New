@@ -1237,6 +1237,11 @@ a:hover {
         gap: 1em;
     }
 
+    .use-our-world
+    {
+        overflow: hidden;
+    }
+
     .userlist {
         justify-content: flex-start;
     }
