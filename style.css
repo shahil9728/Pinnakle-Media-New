@@ -1288,7 +1288,7 @@ a:hover {
     }
 }
 
-@media (min-width: 1400px) and (max-width: 1800px) {
+@media (min-width: 1400px){
     h1 {
         font-size: 6em;
     }
