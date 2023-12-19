@@ -82,9 +82,6 @@ pauseBtn.addEventListener('click', () => {
 
 
 
-
-
-
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide1');
 
@@ -96,27 +93,31 @@ function showSlide(n) {
     }
 
     slides.forEach(slide => {
+        slide.style.visibility = "hidden";
+        slide.style.transition = "visibility 0s 0.3s, opacity 0.3s linear";
         slide.style.opacity = "0";
     });
 
     if (slideIndex == 1) {
-        slides[slideIndex].style.transform = "translate(-100%,0px)";
+        slides[slideIndex].style.transform = "translate(-100%, 0px)";
     }
     if (slideIndex == 2) {
-        slides[slideIndex].style.transform = "translate(-200%,0px)";
+        slides[slideIndex].style.transform = "translate(-200%, 0px)";
     }
 
+    slides[slideIndex].style.visibility = "visible";
     slides[slideIndex].style.opacity = "1";
 }
 
 function moveSlide(n) {
     slideIndex += n;
-    console.log(slideIndex);
     showSlide(slideIndex);
 }
 
 // Initial slide display
 showSlide(slideIndex);
+
+
 
 
 document.getElementById('nextBtn').addEventListener('click', () => {
@@ -128,15 +129,15 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 const items = document.querySelectorAll('.accordion button');
 
 function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
+    const itemToggle = this.getAttribute('aria-expanded');
 
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
+    for (i = 0; i < items.length; i++) {
+        items[i].setAttribute('aria-expanded', 'false');
+    }
 
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
+    if (itemToggle == 'false') {
+        this.setAttribute('aria-expanded', 'true');
+    }
 }
 
 items.forEach((item) => item.addEventListener('click', toggleAccordion));
@@ -148,19 +149,17 @@ const slideTrack = document.querySelector('.slide-track');
 const slideTrack1 = document.querySelector('.slide-track1');
 
 slideTrack.addEventListener('mouseenter', () => {
-  slideTrack.classList.add('stop-animation');
+    slideTrack.classList.add('stop-animation');
 });
 
 slideTrack.addEventListener('mouseleave', () => {
-  slideTrack.classList.remove('stop-animation');
+    slideTrack.classList.remove('stop-animation');
 });
 
 slideTrack1.addEventListener('mouseenter', () => {
-  slideTrack1.classList.add('stop-animation');
+    slideTrack1.classList.add('stop-animation');
 });
 
 slideTrack1.addEventListener('mouseleave', () => {
-  slideTrack1.classList.remove('stop-animation');
+    slideTrack1.classList.remove('stop-animation');
 });
-
-

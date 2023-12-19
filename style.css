@@ -502,10 +502,10 @@ a:hover {
 .slider-container {
     position: relative;
     border-radius: 10px;
-    padding: 5em 7em;
+    padding: 5em 5em;
     /* height: 100vh; */
     background-color: #DFE8C0;
-    width: 98%;
+    width: 90%;
     overflow: hidden;
 }
 
@@ -517,7 +517,7 @@ a:hover {
 .slide1 {
     min-width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     opacity: 0;
@@ -1118,24 +1118,27 @@ a:hover {
 
     .playbtn,
     .pausebtn {
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 0%);
     }
 
     .testimonial-div {
         margin-top: 10em;
     }
 
+    .testimonial-divs {
+        max-width: 450px;
+    }
+
     .testimonial-div h2 span img {
         width: 50%;
     }
 
-    .testimonial-div h2
-    {
+    .testimonial-div h2 {
         font-size: 1em;
     }
 
     .reel {
-        width: 35%;
+        width: 25%;
     }
 
     .reel-features {
@@ -1260,6 +1263,7 @@ a:hover {
 
     .accordion button {
         font-size: 1em;
+        padding-right: 1.5em;
     }
 
     .faq-left,
@@ -1502,4 +1506,14 @@ a:hover {
         transform: scale(1);
     }
 
+}
+
+
+.reel::-webkit-media-controls {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.reel:hover::-webkit-media-controls {
+    opacity: 1;
 }
