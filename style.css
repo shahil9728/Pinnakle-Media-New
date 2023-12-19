@@ -460,6 +460,11 @@ a:hover {
     width: 80%;
 }
 
+.stats-div:nth-child(1),
+.stats-div:nth-child(2) {
+    padding-right: 2em;
+}
+
 .stats-count {
     font-weight: 600;
     display: flex;
@@ -1151,6 +1156,12 @@ a:hover {
         width: calc(270px * 15);
     }
 
+
+    .stats-div:nth-child(1),
+    .stats-div:nth-child(2) {
+        padding-right: 0em;
+    }
+
     .stats-div {
         width: 95%;
         flex-direction: column;
@@ -1237,8 +1248,7 @@ a:hover {
         gap: 1em;
     }
 
-    .use-our-world
-    {
+    .use-our-world {
         overflow: hidden;
     }
 
@@ -1276,6 +1286,51 @@ a:hover {
         gap: 2em;
         width: 100%;
     }
+}
+
+@media (min-width: 1400px) and (max-width: 1800px) {
+    h1 {
+        font-size: 6em;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 4em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .lead {
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 1.5em;
+    }
+
+    .testimonial-div h2 {
+        margin-top: 1em;
+    }
+
+    .testimonial-divs {
+        max-width: 600px;
+    }
+    .stats-div>h3 {
+        width: 55%;
+    }
+    .process-div {
+        padding: 3em 1em;
+    }
+    .faq-left h1
+    {
+        font-size: 5em;
+    }
+
 }
 
 ::-webkit-scrollbar-thumb {
