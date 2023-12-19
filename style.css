@@ -1309,7 +1309,7 @@ a:hover {
     }
 
     .testimonial-div h2 {
-        margin-top: 1em;
+        margin-top: 2em;
     }
 
     .testimonial-divs {
@@ -1324,6 +1324,9 @@ a:hover {
     .faq-left h1
     {
         font-size: 5em;
+    }
+    .social-content-divs {
+        grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     }
 
 }
