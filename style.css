@@ -696,6 +696,12 @@ a:hover {
     color: black;
 }
 
+.process-head {
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
 .second-process-div {
     width: 100%;
 }
@@ -1100,12 +1106,12 @@ a:hover {
 
     .lead {
         width: 90%;
-        font-weight: 700;
-        font-size: 2.2em;    
+        /* font-weight: 700; */
+        /* font-size: 2.2em;     */
     }
 
     .hero-desc {
-        width: 70%;
+        width: 80%;
     }
 
     #hero::after {
@@ -1233,6 +1239,13 @@ a:hover {
 
     .process-divs {
         flex-direction: column;
+        gap: 3em;
+    }
+
+    .process-head {
+        font-size: 1.2em;
+        font-weight: 500;
+        margin-bottom: 1em;
     }
 
     .social-content-divs {
@@ -1247,6 +1260,10 @@ a:hover {
 
     .use-our-world {
         overflow: hidden;
+    }
+
+    .use-our-world h1 {
+        width: 80%;
     }
 
     .userlist {
@@ -1285,7 +1302,7 @@ a:hover {
     }
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1400px) {
     h1 {
         font-size: 6em;
     }
@@ -1317,16 +1334,19 @@ a:hover {
     .testimonial-divs {
         max-width: 600px;
     }
+
     .stats-div>h3 {
         width: 55%;
     }
+
     .process-div {
         padding: 3em 1em;
     }
-    .faq-left h1
-    {
+
+    .faq-left h1 {
         font-size: 5em;
     }
+
     .social-content-divs {
         grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     }
