@@ -1099,11 +1099,13 @@ a:hover {
     }
 
     .lead {
-        width: 95%;
+        width: 90%;
+        font-weight: 700;
+        font-size: 2.2em;    
     }
 
     .hero-desc {
-        width: 95%;
+        width: 70%;
     }
 
     #hero::after {
