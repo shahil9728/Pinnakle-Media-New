@@ -84,6 +84,7 @@ pauseBtn.addEventListener('click', () => {
 
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide1');
+const videos = document.querySelectorAll('.videoreel');
 
 function showSlide(n) {
     if (n >= slides.length) {
@@ -104,6 +105,15 @@ function showSlide(n) {
     if (slideIndex == 2) {
         slides[slideIndex].style.transform = "translate(-200%, 0px)";
     }
+    if (slideIndex == 3) {
+        slides[slideIndex].style.transform = "translate(-300%, 0px)";
+    }
+
+    videos.forEach(video => {
+        if (!video.paused) {
+            video.pause();
+        }
+    });
 
     slides[slideIndex].style.visibility = "visible";
     slides[slideIndex].style.opacity = "1";
@@ -116,9 +126,6 @@ function moveSlide(n) {
 
 // Initial slide display
 showSlide(slideIndex);
-
-
-
 
 document.getElementById('nextBtn').addEventListener('click', () => {
     moveSlide(1);
