@@ -170,3 +170,65 @@ slideTrack1.addEventListener('mouseenter', () => {
 slideTrack1.addEventListener('mouseleave', () => {
     slideTrack1.classList.remove('stop-animation');
 });
+
+// Function to start the animation
+function startAnimation(element) {
+    let startValue = 4956400;
+    let endValue = parseInt(element.getAttribute("data-value").replace(/,/g, ''));
+    let duration = Math.floor(5000 / (endValue - startValue));
+    let intervalId;
+
+    function updateValue() {
+        startValue += 1;
+        element.textContent = startValue.toLocaleString();
+        if (startValue >= endValue) {
+            clearInterval(intervalId);
+        }
+    }
+
+    intervalId = setInterval(updateValue, duration);
+}
+
+// Intersection Observer configuration
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5 // Change this threshold as needed
+};
+
+let observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            startAnimation(entry.target);
+            observer.unobserve(entry.target); // Stop observing once the animation starts
+        }
+    });
+}, options);
+
+// Start observing the element
+let valueDisplay = document.querySelector("#videoviews");
+observer.observe(valueDisplay);
+
+
+
+
+
+
+
+
+
+// let valueDisplays = document.querySelectorAll("#videoviews");
+// let interval = 5000;
+
+// valueDisplays.forEach((valueDisplay) => {
+//     let startValue = 4955500;
+//     let endValue = parseInt(valueDisplay.getAttribute("data-value").replace(/,/g, ''));
+//     let duration = Math.floor(interval / (endValue - startValue));
+//     let counter = setInterval(function () {
+//         startValue += 1;
+//         valueDisplay.textContent = startValue.toLocaleString(); 
+//         if (startValue >= endValue) { 
+//             clearInterval(counter);
+//         }
+//     }, duration);
+// });
