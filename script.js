@@ -173,14 +173,18 @@ slideTrack1.addEventListener('mouseleave', () => {
 
 // Function to start the animation
 function startAnimation(element) {
-    let startValue = 1000000;
+    let startValue = 2000000;
+    var startDate = new Date('2023-12-21');
+    var today = new Date();
+    var diff = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
     let endValue = parseInt(element.getAttribute("data-value").replace(/,/g, ''));
+    endValue = endValue + diff * 10000;
     let duration = Math.floor(5000 / (endValue - startValue));
     let intervalId;
 
     function updateValue() {
         startValue += 1368;
-        element.textContent = startValue.toLocaleString() + '+'; ;
+        element.textContent = startValue.toLocaleString() + '+';;
         if (startValue >= endValue) {
             clearInterval(intervalId);
         }
@@ -226,8 +230,8 @@ observer.observe(valueDisplay);
 //     let duration = Math.floor(interval / (endValue - startValue));
 //     let counter = setInterval(function () {
 //         startValue += 1;
-//         valueDisplay.textContent = startValue.toLocaleString(); 
-//         if (startValue >= endValue) { 
+//         valueDisplay.textContent = startValue.toLocaleString();
+//         if (startValue >= endValue) {
 //             clearInterval(counter);
 //         }
 //     }, duration);
