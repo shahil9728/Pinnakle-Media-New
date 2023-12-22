@@ -1302,6 +1302,24 @@ a:hover {
     }
 }
 
+
+/* For Tablets */
+@media (min-width: 481px) and (max-width: 850px) {
+    .videodiv {
+        width: 50%;
+        top: -100px;
+    }
+
+    .playbtn, .pausebtn {
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+
+
+/* Desktop Only */
 @media (min-width: 1400px) {
     h1 {
         font-size: 6em;
