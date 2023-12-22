@@ -179,7 +179,7 @@ function startAnimation(element) {
     let intervalId;
 
     function updateValue() {
-        startValue += 2368;
+        startValue += 1368;
         element.textContent = startValue.toLocaleString() + '+'; ;
         if (startValue >= endValue) {
             clearInterval(intervalId);
