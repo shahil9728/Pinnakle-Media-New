@@ -173,13 +173,13 @@ slideTrack1.addEventListener('mouseleave', () => {
 
 // Function to start the animation
 function startAnimation(element) {
-    let startValue = 4956400;
+    let startValue = 1000000;
     let endValue = parseInt(element.getAttribute("data-value").replace(/,/g, ''));
     let duration = Math.floor(5000 / (endValue - startValue));
     let intervalId;
 
     function updateValue() {
-        startValue += 1;
+        startValue += 2368;
         element.textContent = startValue.toLocaleString() + '+'; ;
         if (startValue >= endValue) {
             clearInterval(intervalId);
