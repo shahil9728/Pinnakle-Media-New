@@ -180,7 +180,7 @@ function startAnimation(element) {
 
     function updateValue() {
         startValue += 1;
-        element.textContent = startValue.toLocaleString();
+        element.textContent = startValue.toLocaleString() + '+'; ;
         if (startValue >= endValue) {
             clearInterval(intervalId);
         }
